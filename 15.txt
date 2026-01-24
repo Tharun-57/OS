@@ -1,0 +1,11 @@
+#include<stdio.h>
+int main(){
+int s,n,i;
+printf("Enter starting block: ");
+scanf("%d",&s);
+printf("Enter file size (number of blocks): ");
+scanf("%d",&n);
+printf("Allocated blocks:\n");
+for(i=0;i<n;i++)printf("%d ",s+i);
+return 0;
+}

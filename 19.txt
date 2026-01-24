@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main(){
+int n,i;
+char f[10][20];
+printf("Enter number of files: ");
+scanf("%d",&n);
+for(i=0;i<n;i++){
+printf("Enter file name %d: ",i+1);
+scanf("%s",f[i]);
+}
+printf("Files in directory:\n");
+for(i=0;i<n;i++)printf("%s\n",f[i]);
+return 0;
+}

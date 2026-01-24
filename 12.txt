@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main(){
+int f,p,i,j=0,k,hit,fault=0;
+int mem[10],ref[20];
+printf("Enter number of frames: ");
+scanf("%d",&f);
+printf("Enter number of pages: ");
+scanf("%d",&p);
+printf("Enter page reference string:\n");
+for(i=0;i<p;i++)scanf("%d",&ref[i]);
+for(i=0;i<f;i++)mem[i]=-1;
+for(i=0;i<p;i++){
+hit=0;
+for(k=0;k<f;k++)
+if(mem[k]==ref[i])hit=1;
+if(hit==0){
+mem[j]=ref[i];
+j=(j+1)%f;
+fault++;
+}}
+printf("Total Page Faults = %d\n",fault);
+return 0;
+}
